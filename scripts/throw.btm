@@ -1,0 +1,7 @@
+RULE Trigger fault by setting Byteman configuration file
+CLASS TriggerFaultsByBytemanConfigurationFile
+METHOD targetMethod
+AT ENTRY
+IF TRUE
+DO throw new RuntimeException("BOOM")
+ENDRULE
